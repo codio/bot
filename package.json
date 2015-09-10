@@ -11,8 +11,6 @@
     "hubot-google-images": "^0.2.1",
     "hubot-google-translate": "^0.2.0",
     "hubot-help": "^0.1.1",
-    "hubot-pugme": "^0.1.0",
-    "hubot-redis-brain": "0.0.3",
     "hubot-rules": "^0.1.1",
     "hubot-scripts": "^2.16.2",
     "hubot-shipit": "^0.2.0"
