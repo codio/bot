@@ -4,5 +4,8 @@
   "hubot-google-images",
   "hubot-google-translate",
   "hubot-rules",
-  "hubot-shipit"
+  "hubot-shipit",
+  "hubot-cheers",
+  "hubot-marvin",
+  "hubot-pusheen"
 ]
