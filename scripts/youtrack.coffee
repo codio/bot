@@ -8,7 +8,7 @@
 #   HUBOT_YOUTRACK_URL  = <scheme>://<username>:<password>@<host:port>/<basepath>
 #
 # Commands:
-#   #project-number - responds with a summary of the issue
+#   project-number - responds with a summary of the issue
 #   #number - responds with a summary of the issue for codio project
 #
 # Author:
