@@ -30,16 +30,15 @@ path = url_parts.pathname if url_parts.pathname?
 
 module.exports = (robot) ->
 
-  robot.hear /(codio-[\d]+)/gi, (msg) -> getIssue msg
+  robot.hear /codio-([\d]+)/gi, (msg) -> getIssue msg
 
   robot.hear /#(\d+)/g, (msg) -> getIssue msg, "codio-"
 
   getIssue = (msg, prefix="") ->
-    handleIssue(msg, "#{prefix}#{match}") for match, i in msg.match
+    handleIssue(msg, "#{prefix}#{match.replace(/^#/, '')}") for match, i in msg.match
 
 
   handleIssue = (msg, issueId) ->
-    console.log 'Getting', issueId
     askYoutrack "/rest/issue/#{issueId}", (err, issue) ->
       console.log err
       return msg.send "I'd love to tell you about it, but there was an error looking up that issue" if err? || !issue?
